@@ -16,3 +16,13 @@ reporting_task:
     Formatted as markdown without '```'
   agent: reporting_analyst
   output_file: report.md
+
+ui_task: 
+  description: >
+    Create a visually appealing and user-friendly presentation of the report.
+    Make sure to include all relevant information and make it easy to understand.
+  expected_output: >
+    A visually appealing and user-friendly presentation of the report.
+    Formatted as markdown without '```'
+  agent: ui_presenter
+  output_file: ui.md

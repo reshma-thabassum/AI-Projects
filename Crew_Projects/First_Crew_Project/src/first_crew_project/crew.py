@@ -30,6 +30,13 @@ class FirstCrewProject():
             config=self.agents_config['reporting_analyst'],
             verbose=True
         )
+    
+    @agent
+    def ui_presenter(self) -> Agent:
+        return Agent(
+            config=self.agents_config['ui_presenter'],
+            verbose=True
+        )
 
     # To learn more about structured task outputs,
     # task dependencies, and task callbacks, check out the documentation:
@@ -45,6 +52,13 @@ class FirstCrewProject():
         return Task(
             config=self.tasks_config['reporting_task'],
             output_file='report.md'
+        )
+    
+    @task
+    def ui_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['ui_task'],
+            output_file='ui.md'
         )
 
     @crew
